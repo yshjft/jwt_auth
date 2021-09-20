@@ -77,7 +77,7 @@ router.post("/login", async(req, res, next) => {
                 res.cookie('refreshToken', refreshToken);
                 res.status(200).json({message:"LOGIN_SUCCESS"})
             }else{
-                res.json({message: 'NOT_REGISTERED'})
+                res.json({message: 'WRONG_PASSWORD'})
             }
         }else{
             res.json({message: 'NOT_REGISTERED'})
